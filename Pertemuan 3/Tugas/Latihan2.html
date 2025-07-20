@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Tiket Travel</title>
+</head>
+<body>
+
+<h2>Daftar Harga Tiket Travel</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+        <th>Tujuan</th>
+        <th>Kelas</th>
+        <th>Harga Tiket</th>
+    </tr>
+    <tr>
+        <td rowspan="3">Jakarta</td>
+        <td>Eksekutif</td>
+        <td>Rp70.000</td>
+    </tr>
+    <tr>
+        <td>Bisnis</td>
+        <td>Rp40.000</td>
+    </tr>
+    <tr>
+        <td>Ekonomi</td>
+        <td>Rp10.000</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Solo</td>
+        <td>Eksekutif</td>
+        <td>Rp80.000</td>
+    </tr>
+    <tr>
+        <td>Bisnis</td>
+        <td>Rp50.000</td>
+    </tr>
+    <tr>
+        <td>Ekonomi</td>
+        <td>Rp20.000</td>
+    </tr>
+    <tr>
+        <td rowspan="3">Surabaya</td>
+        <td>Eksekutif</td>
+        <td>Rp90.000</td>
+    </tr>
+    <tr>
+        <td>Bisnis</td>
+        <td>Rp60.000</td>
+    </tr>
+    <tr>
+        <td>Ekonomi</td>
+        <td>Rp30.000</td>
+    </tr>
+</table>
+
+<h2>Form Pemesanan Tiket Travel</h2>
+<form name="fform">
+    <label for="nama">Nama Pemesan : </label><br>
+    <input type="text" name="nama" required><br><br>
+
+    <label for="tujuan">Tujuan : </label><br>
+    <select name="tujuan">
+        <option value="Jakarta">Jakarta</option>
+        <option value="Solo">Solo</option>
+        <option value="Surabaya">Surabaya</option>
+    </select><br><br>
+
+    <label for="kelas">Kelas : </label><br>
+    <select name="kelas">
+        <option value="Eksekutif">Eksekutif</option>
+        <option value="Bisnis">Bisnis</option>
+        <option value="Ekonomi">Ekonomi</option>
+    </select><br><br>
+
+    <label for="jumlah">Banyak Tiket : </label><br>
+    <input type="number" name="jumlah" min="1" required><br><br>
+
+    <label>Status Member : </label><br>
+    <input type="radio" name="member" value="Ya"> Ya
+    <input type="radio" name="member" value="Tidak" checked> Tidak<br><br>
+
+    <button type="button" onclick="hitungTotal()">Pesan</button>
+    <button type="button" onclick="resetForm()">Reset</button>
+</form>
+
+<script src="Latihan2.js"></script>
+
+</body>
+</html>
